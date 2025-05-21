@@ -243,3 +243,31 @@ footer p {
     margin-left: 10px;
   }
 }
+
+.shop-card {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.shop-card img {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  max-width: 150px;
+  border-radius: 0.5rem;
+}
+
+/* Mantener el layout horizontal en pantallas chicas */
+@media (max-width: 768px) {
+  .shop-card {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .shop-card img {
+    margin-bottom: 0;
+  }
+}
