@@ -1,0 +1,245 @@
+:root {
+  --primary: #e63946;
+  --dark: #e63946;
+  --light: #f8f9fa;
+  --accent: #F0F0F0;
+  --muted: #EFDECD;
+  --dark: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light);
+  margin: 0;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--dark);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.navbar-brand:hover {
+  color: var(--muted);
+  /* text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px rgb(222, 255, 255),
+    0 0 80px rgb(222, 255, 255),
+    0 0 90px rgb(222, 255, 255),
+    0 0 100px rgb(222, 255, 255),
+    0 0 150px rgb(222, 255, 255); */
+
+  /* prueva el text-shadow para ver si asi te gusta como si fuera brillante :D */
+}
+
+.nav-item {
+  color: var(--muted);
+  display: inline-flex;
+}
+
+.nav-item:hover {
+  color: var(--primary);
+}
+
+/* HERO SECTION */
+.hero {
+  background: url('../img/sliders-1.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 1.4rem;
+  color: var(--light);
+  margin-bottom: 2rem;
+}
+
+/* BOTONES */
+.btn-main {
+  background: var(--primary);
+  border: none;
+  padding: 0.75rem 2rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-main:hover {
+  background: #c1121f;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 0.75rem 2rem;
+  margin-left: 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* SECCIONES */
+.section {
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* ICONOS DE FEATURES */
+.features .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+/* MENÚ ITEMS */
+.menu-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item-body {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.menu-item-body h3 {
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.menu-item-body p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--muted);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* GRILLADO */
+.col-md-4 {
+  margin-top: 30px;
+}
+
+/* VIDEO HERO opcional (si lo usas) */
+.hero-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* AOS - animaciones con scroll */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+.delivery-icon {
+  height: 50px;
+  transition: transform 0.2s;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .delivery-icon {
+    height: 30px;
+    margin-left: 10px;
+  }
+}

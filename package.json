@@ -1,0 +1,20 @@
+{
+  "name": "landingqr2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "npm i && nodemon server.js",
+    "start": "node server.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "cherry",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "node": "^24.0.1",
+    "nodemon": "^3.1.10"
+  }
+}
