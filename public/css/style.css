@@ -158,15 +158,18 @@ body {
   background: #e7e7e7;
   transition: 1.ms ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  height: 155px;
+
+  border: red 1px solid;
 }
 
 .menu-item img {
-  max-height: 250px;
+  /* max-height: 250px; */
   object-fit: cover;
   width: 100%;
   max-width: 150px;
   border-radius: 0.5rem;
-  height: 250px;
+  height: 153px;
 }
 
 /* Mantener horizontal en móviles */
