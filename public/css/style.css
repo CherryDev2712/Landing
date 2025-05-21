@@ -171,6 +171,9 @@ body {
   max-width: 150px;
   border-radius: 20px;
   height: 153px;
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: 15px;
 }
 
 /* Mantener horizontal en móviles */
@@ -182,7 +185,9 @@ body {
   }
 
   .menu-item img {
-    margin-bottom: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 15px;
   }
 }
 
