@@ -11,7 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--light);
@@ -34,17 +33,6 @@ body {
 
 .navbar-brand:hover {
   color: var(--muted);
-  /* text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px rgb(222, 255, 255),
-    0 0 80px rgb(222, 255, 255),
-    0 0 90px rgb(222, 255, 255),
-    0 0 100px rgb(222, 255, 255),
-    0 0 150px rgb(222, 255, 255); */
-
-  /* prueva el text-shadow para ver si asi te gusta como si fuera brillante :D */
 }
 
 .nav-item {
@@ -149,56 +137,37 @@ body {
   color: var(--primary);
 }
 
-/* MENÚ ITEMS */
+/* MENÚ ITEMS - MODIFICADO PARA SER MÁS PEQUEÑO */
 .menu-item {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.5rem;
   background: #e7e7e7;
   transition: 1.ms ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  height: 200px;
+  height: 150px;
   border-radius: 20px;
-
-  /* border: red 1px solid; */
 }
 
 .menu-item img {
-  /* max-height: 250px; */
   object-fit: cover;
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
   border-radius: 20px;
-  height: 153px;
-  margin-bottom: auto;
-  margin-top: auto;
-  margin-left: 15px;
-}
-
-/* Mantener horizontal en móviles */
-@media (max-width: 768px) {
-  .menu-item {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .menu-item img {
-    margin-bottom: auto;
-    margin-top: auto;
-    margin-left: 15px;
-  }
+  height: 120px;
+  margin: auto 0 auto 10px;
 }
 
 .menu-item-body {
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
 }
 
 .menu-item-body h3 {
   font-weight: bold;
   color: var(--dark);
+  font-size: 1.1rem;
 }
 
 .menu-item-body p {
@@ -230,7 +199,7 @@ footer p {
 
 /* GRILLADO */
 .col-md-4 {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* VIDEO HERO opcional (si lo usas) */
@@ -259,37 +228,58 @@ footer p {
   margin-left: 20px;
 }
 
-@media (max-width: 768px) {
-  .delivery-icon {
-    height: 30px;
-    margin-left: 10px;
-  }
-}
-
+/* TIENDAS - MODIFICADO PARA SER MÁS PEQUEÑO */
 .shop-card {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
 .shop-card img {
-  max-height: 200px;
+  max-height: 150px;
   object-fit: cover;
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
   border-radius: 0.5rem;
 }
 
-/* Mantener el layout horizontal en pantallas chicas */
+.shop-card .menu-item-body h3 {
+  font-size: 1.1rem;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  /* Menú en móviles */
+  .menu-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    height: 130px;
+  }
+  
+  .menu-item img {
+    max-width: 100px;
+    height: 100px;
+    margin-left: 10px;
+  }
+
+  /* Tiendas en móviles */
   .shop-card {
     flex-direction: row;
     align-items: flex-start;
     text-align: left;
   }
-
+  
   .shop-card img {
-    margin-bottom: 0;
+    max-width: 100px;
+    max-height: 120px;
+  }
+
+  /* Delivery icons en móviles */
+  .delivery-icon {
+    height: 30px;
+    margin-left: 10px;
   }
 }
