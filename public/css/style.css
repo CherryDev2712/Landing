@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: black;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
   background-color: var(--light);
   margin: 0;
   color: #333;
+  margin: auto;
+  width: 480px;
 }
 
 /* NAVBAR */
@@ -46,7 +49,8 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background: url('../img/sliders-1.png') center/cover no-repeat;
+  /* background: url('../img/sliders-1.png') center/cover no-repeat; */
+  background-color: grey;
   color: white;
   text-align: center;
   padding: 8rem 1rem;
@@ -65,7 +69,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  max-width: 130px;
   margin: 0 auto;
 }
 
@@ -137,44 +141,6 @@ body {
   color: var(--primary);
 }
 
-/* MENÚ ITEMS - MODIFICADO PARA SER MÁS PEQUEÑO */
-.menu-item {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  gap: 0.5rem;
-  background: #e7e7e7;
-  transition: 1.ms ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  height: 150px;
-  border-radius: 20px;
-}
-
-.menu-item img {
-  object-fit: cover;
-  width: 100%;
-  max-width: 120px;
-  border-radius: 20px;
-  height: 120px;
-  margin: auto 0 auto 10px;
-}
-
-.menu-item-body {
-  padding: 1rem;
-  text-align: left;
-}
-
-.menu-item-body h3 {
-  font-weight: bold;
-  color: var(--dark);
-  font-size: 1.1rem;
-}
-
-.menu-item-body p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
 /* FOOTER */
 footer {
   background: var(--dark);
@@ -212,84 +178,43 @@ footer p {
   z-index: 0;
 }
 
-/* AOS - animaciones con scroll */
-[data-aos] {
-  opacity: 0;
-  transition-property: opacity, transform;
-}
-
-[data-aos].aos-animate {
-  opacity: 1;
-}
-
 .delivery-icon {
   height: 50px;
   transition: transform 0.2s;
   margin-left: 20px;
 }
 
-.shop-card {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  gap: 0.5rem;
-  width: 50%;
-  /* padding: 1rem; */
-  margin-left: 25%;
-}
-
-.shop-card img {
-  max-height: 150px;
-  object-fit: cover;
-  width: 100%;
-  max-width: 120px;
-  border-radius: 0.5rem;
-}
-
-.shop-card .menu-item-body h3 {
-  font-size: 1.1rem;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  /* Menú en móviles */
-  .menu-item {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-    height: 130px;
-  }
-
-  .menu-item-body {
-    padding: 0.5rem;
-    text-align: left;
-    /* height: 40px; */
-  }
-  
-  .menu-item img {
-    max-width: 100px;
-    height: 100px;
-    margin-left: 10px;
-  }
-
-  /* Tiendas en móviles */
-  .shop-card {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-    width: 70%;
-    height: 130px;
-    margin-left: 15%;
-  }
-  
-  .shop-card img {
-    max-width: 100px;
-    max-height: 120px;
-  }
-
   /* Delivery icons en móviles */
   .delivery-icon {
     height: 30px;
     margin-left: 10px;
   }
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  padding: 5px;
+  height: 100px;
+  width: 430px;
+  background-color: #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.menu-item img {
+  width: 150px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
 }
