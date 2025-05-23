@@ -1,133 +1,203 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <%- include('load/head') -%>
-</head>
+    <%- include('load/head') %>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">ByTezz</a> -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#menu">Menu</a>
-        </li>
-        <!-- <li>
-          <a class="nav-link" href="#shops">Tiendas</a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link" href="#gallery">Galería</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#offers">Ofertas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#delivery">Delivery</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <section class="section" id="menu">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <div class="row g-4">
-        
-        <!-- 1 -->
-        <div class="menu-item container">
-          <div class="menu-img">
-            <img src="../public/img/icon-shops.jpg" alt="menu-img"  class="img-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#offers">Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#delivery">Delivery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-header">Nuestro Menú</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+          <!-- Menu Item -->
+          <div class="menu-item bg-white p-3 mb-4 shadow-sm">
+            <div class="row align-items-center">
+              <div class="col-4">
+                <div class="menu-img">
+                  <img src="../public/img/icon-shops.jpg" alt="Hamburguesa sencilla" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="menu-content">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h4 class="menu-title mb-0">Sencilla</h4>
+                    <span class="badge bg-danger bg-opacity-10 text-danger" style="margin-left: 10px;"><span class="text-white">Ahorra 15%</span></span>
+                  </div>
+                  
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="text-success fw-bold me-2"><i class="bi bi-currency-dollar"></i>40.00</span>
+                    <span class="mx-2 text-muted">|</span>
+                    <span class="text-warning fw-bold"><i class="bi bi-star-fill"></i>4.5</span>
+                  </div>
+                  
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-bicycle me-2 text-primary"></i>
+                    <span class="me-3">15-20 min</span>
+                    <span class="text-danger fw-bold"><i class="bi bi-currency-dollar text-success"></i>20</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="menu-content">
-            <h4 class="menu-title" style="margin-right: 30px;">sencilla</h4>
-            <i class="bi bi-currency-dollar text-success"><span class="text-dark">40.00</span></i> | <i class="bi bi-star-fill text-warning"><span class="text-dark">4.5</span></i><br>
-            <i class="bi bi-bicycle"></i> 15-20 min <span class="text-danger"><i class="bi bi-currency-dollar text-success">20</i></i></span><br>
-            <span style="background-color: #e63947a5; padding: 2px; border-radius: 3px;">ahorra 15%</span>
-          </div>
+          
+          <!-- Puedes duplicar este bloque para más items del menú -->
         </div>
       </div>
     </div>
   </section>
-  <br>
-  <br>
+
+  <!-- Gallery Section -->
   <section id="gallery" class="py-5 bg-white">
     <div class="container">
-      <h2 class="text-center mb-4">Galería</h2>
-      <div class="row g-3">
-        <div class="col-md-4"><img src="../public/img/slider_gallery.jpg" class="img-fluid rounded shadow gallery"></div>
-        <div class="col-md-4"><img src="../public/img/slider_gallery_2.jpg" class="img-fluid rounded shadow"></div>
-        <div class="col-md-4"><img src="../public/img/slider_gallery_3.jpg" class="img-fluid rounded shadow"></div>
+      <h2 class="text-center section-header">Galería</h2>
+      
+      <div class="row g-4">
+        <div class="col-4">
+          <img src="../public/img/slider_gallery.jpg" class="img-fluid gallery-img" alt="Slider 1">
+        </div>
+        <div class="col-4">
+          <img src="../public/img/slider_gallery_2.jpg" class="img-fluid gallery-img" alt="Slider 2">
+        </div>
+        <div class="col-4">
+          <img src="../public/img/slider_gallery_3.jpg" class="img-fluid gallery-img" alt="Slider 3">
+        </div>
+        
+        <!-- Puedes añadir más imágenes aquí -->
       </div>
     </div>
   </section>
-  <br>
-  <br>
-  <section id="offers" class="py-5 text-dark">
+
+  <!-- Offers Section -->
+  <section id="offers" class="py-5 bg-light">
     <div class="container text-center">
-      <h2 class="mb-4">Ofertas Especiales</h2>
-      <p class="lead"><strong>¡Combo 3x2!</strong> llevate 3 al precio de 2.</p>
-      <a href="https://wa.me/525661267101" class="btn btn-dark">Ordenar Ahora a nuestro whatsapp</a>
-    </div>
-  </section>
-  <br>
-  <br>  
-  <section id="delivery" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-4 text-center">¡Entrega a Domicilio!</h2>
-      <p class="lead text-center">Recibe tus sliders favoritos donde estés, ¡rápido y caliente!</p>
-      <p class="lead text-center">Manda mesaje al <strong>+ 525661267101</strong> para que lo entreguemos nosotros a tu domicilio!</p>
-    </div>
-    <div class="text-center mt-4">
-      <p>También estamos en:</p>
-      <div class="d-flex justify-content-center gap-4 flex-wrap">
-        <img src="../public/img/uber-eats-1.svg" alt="Uber Eats" class="delivery-icon">
-        <img src="../public/img/rappi-seeklogo.png" alt="Rappi" class="delivery-icon">
-        <img src="../public/img/didi-chuxing.svg" alt="Didi Food" class="delivery-icon">
+      <h2 class="section-header">Ofertas Especiales</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="p-4 bg-white rounded-3 shadow-sm mb-4">
+            <h3 class="text-danger mb-3">¡Combo 3x2!</h3>
+            <p class="lead mb-4">Llévate 3 hamburguesas al precio de 2. Aprovecha esta oferta por tiempo limitado.</p>
+            <a href="https://wa.me/525661267101" class="btn btn-primary-custom btn-lg rounded-pill">
+              <i class="bi bi-whatsapp me-2"></i>Ordenar por WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <br>
-  <br>
 
+  <!-- Delivery Section -->
+  <section id="delivery" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="section-header">¡Entrega a Domicilio!</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="p-4 mb-4">
+            <i class="bi bi-truck text-danger" style="font-size: 2.5rem;"></i>
+            <p class="lead mt-3">Recibe tus sliders favoritos donde estés, ¡rápido y caliente!</p>
+            <p class="mb-4">Manda mensaje al <strong class="text-danger">+52 566 126 7101</strong> para que lo entreguemos nosotros a tu domicilio!</p>
+            
+            <div class="mt-4">
+              <p class="text-muted mb-3">También estamos en:</p>
+              <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <img src="../public/img/uber-eats-1.svg" alt="Uber Eats" class="delivery-icon">
+                <img src="../public/img/rappi-seeklogo.png" alt="Rappi" class="delivery-icon">
+                <img src="../public/img/didi-chuxing.svg" alt="Didi Food" class="delivery-icon">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Modal de contacto -->
-  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true" style="background-color: #e63946;">
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white">
-        <div class="modal-header border-secondary">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
           <h5 class="modal-title" id="contactModalLabel">Contáctanos</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p><i class="bi bi-whatsapp"></i> Teléfono: + 525661267101</p>
-          <p><i class="bi bi-envelope"></i> Correo: contacto@sliderburgers.com</p> <!-- # Cambiar correo por el correo real -->
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-whatsapp text-success me-3" style="font-size: 1.5rem;"></i>
+            <div>
+              <h6 class="mb-0">WhatsApp</h6>
+              <p class="mb-0">+52 566 126 7101</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-envelope text-primary me-3" style="font-size: 1.5rem;"></i>
+            <div>
+              <h6 class="mb-0">Correo electrónico</h6>
+              <p class="mb-0">contacto@sliderburgers.com</p>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer border-secondary">
-          <button type="button" class="btn btn-main" data-bs-dismiss="modal">Cerrar</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="https://wa.me/525661267101" class="btn btn-danger">
+            <i class="bi bi-whatsapp me-1"></i>Enviar mensaje
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-  <footer>
-    <p><span title="Todos los derechos reservados.">&copy; ByTezz.</span></p>
-    <p>
-      <!-- contact -->
-      <a href="#">Inicio</a>|
-      <a href="#menu">Menú</a>|
-      <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-whatsapp"></i> + 525661267101</a>
-    </p>
-    <p>
-      <!-- social media -->
-      <a href="##"><i class="bi bi-instagram"></i></a>
-      <a href="##"><i class="bi bi-facebook"></i></a>
-      <a href="##"><i class="bi bi-twitter"></i></a>
-    </p>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="mb-3">&copy; 2023 ByTezz. Todos los derechos reservados.</p>
+          
+          <div class="d-flex justify-content-center mb-3">
+            <a href="#" class="text-white text-decoration-none mx-3">Inicio</a>
+            <a href="#menu" class="text-white text-decoration-none mx-3">Menú</a>
+            <a href="#" class="text-white text-decoration-none mx-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+              Contacto
+            </a>
+          </div>
+          
+          <div class="social-icons">
+            <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../public/js/app.js"></script>
 </body>
