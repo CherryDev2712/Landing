@@ -10,6 +10,10 @@
         --info: #17a2b8;
     }
 
+    html {
+        background-color: var(--dark);
+    }
+
     /* === Estilos Generales (mantenidos) === */
     body {
         font-family: 'Poppins', sans-serif;
