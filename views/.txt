@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('load/head') %>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Galería</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-3">
+    <div class="container">
+      <h2 class="text-center section-header mb-4">Nuestras Tiendas</h2>
+      
+      <!-- Menu Item 1 -->
+      <div class="menu-card bg-white shadow-sm">
+        <div class="menu-img-container">
+          <img src="../public/img/tacos-img.png" alt="logo img" class="menu-img">
+          <span class="menu-badge">4.3 (300+)</span>
+          <span class="best-seller-tag">N.º1</span>
+        </div>
+        <div class="menu-content">
+          <h3 class="menu-title">El bilsito</h3>
+          <p class="menu-category">Tacos/Mexicana</p>
+          
+          <div>
+            <span class="menu-rating"><i class="bi bi-star-fill"></i> 4.5</span>
+            <span>10-25 min</span>
+          </div>
+          
+          <div class="menu-delivery-info">
+            <div>
+              <span class="menu-price">MX$40</span>
+              <span class="menu-old-price">MX$50</span>
+              <div class="menu-savings">Ahorra 20%</div>
+            </div>
+            <div class="text-end">
+              <span class="text-success"><i class="bi bi-bicycle"></i> Envío a $20</span>
+            </div>
+          </div>
+        </div>
+      </div>      
+
+    </div>
+  </section>
+
+  <br>
+  <hr>
+  <br>
+  <br>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center section-header">Galería</h2>
+      
+      <div class="row g-4">
+        <div class="col-4">
+          <img src="../public/img/slider_gallery.jpg" class="img-fluid gallery-img" alt="Slider 1">
+        </div>
+        <div class="col-4">
+          <img src="../public/img/slider_gallery_2.jpg" class="img-fluid gallery-img" alt="Slider 2">
+        </div>
+        <div class="col-4">
+          <img src="../public/img/slider_gallery_3.jpg" class="img-fluid gallery-img" alt="Slider 3">
+        </div>
+        
+        <!-- Puedes añadir más imágenes aquí -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="mb-3">&copy; 2025 ByTezz. Todos los derechos reservados.</p>
+          
+          <div class="d-flex justify-content-center mb-3">
+            <a href="#" class="text-white text-decoration-none mx-3">Inicio</a>
+            <a href="#menu" class="text-white text-decoration-none mx-3">Menú</a>
+            <a href="#" class="text-white text-decoration-none mx-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+              Contacto
+            </a>
+          </div>
+          
+          <div class="social-icons">
+            <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../public/js/app.js"></script>
+</body>
+</html>
+
+
+/* === Variables CSS === */
+:root {
+    --primary: #e63946;
+    --primary-light: #f8a5a5;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #17a2b8;
+}
+
+/* === Estilos Generales (mantenidos) === */
+html {
+    background-color: var(--dark);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--dark);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #fef6f6;
+    color: #333;
+}
+
+/* === Navbar (modificado) === */
+.navbar {
+    background: linear-gradient(135deg, var(--primary), #c1121f);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.8rem 1rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    color: rgba(255,255,255,0.85);
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* === Sección Menú (completamente renovado) === */
+.section-header {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.section-header:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: var(--primary);
+    bottom: -10px;
+    left: 25%;
+    border-radius: 2px;
+}
+
+.menu-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.menu-img-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-img {
+    transform: scale(1.05);
+}
+
+.menu-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.menu-content {
+    padding: 15px;
+}
+
+.menu-title {
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.menu-category {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.menu-rating {
+    background-color: var(--success);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.menu-delivery-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    align-items: center;
+}
+
+.menu-price {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.menu-old-price {
+    text-decoration: line-through;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.menu-savings {
+    color: var(--success);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.best-seller-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000000a3;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.delivery-cost {
+    font-size: 0.9rem;
+}
+
+.delivery-free {
+    color: var(--success);
+    font-weight: 500;
+}
+
+/* === Galería (modificado) === */
+.gallery-img {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* === Ofertas (modificado) === */
+.offers-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.offer-highlight {
+    color: var(--danger);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* === Delivery (modificado) === */
+.delivery-icon {
+    height: 50px;
+    transition: all 0.3s ease;
+    filter: grayscale(30%);
+}
+
+.delivery-icon:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.platforms-title {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* === Botones (modificado) === */
+.btn-primary-custom {
+    background-color: var(--primary);
+    border: none;
+    padding: 10px 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-primary-custom:hover {
+    background-color: #c1121f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(225, 57, 70, 0.4);
+    color: white;
+}
+
+/* === Modal (modificado) === */
+.contact-modal .modal-header {
+    background-color: var(--primary);
+    color: white;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+}
+
+/* === Footer (modificado) === */
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: var(--primary-light);
+}
+
+/* === Responsive (nuevo) === */
+@media (max-width: 576px) {
+    .menu-img-container {
+        height: 160px;
+    }
+    
+    .menu-title {
+        font-size: 1rem;
+    }
+    
+    .delivery-icon {
+        height: 40px;
+    }
+    
+    .gallery-img {
+        height: 120px;
+    }
+    
+    .btn-primary-custom {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-img-container {
+        height: 140px;
+    }
+    
+    .menu-delivery-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .menu-delivery-info > div:last-child {
+        margin-top: 8px;
+    }
+}
